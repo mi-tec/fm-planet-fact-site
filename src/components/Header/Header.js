@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import logo from "../../logo.svg";
 
+import { Link } from "react-router-dom";
+
+import localJson from "../data/data.json";
+
 import "./Header.scss";
 
 export default function Header() {
@@ -31,30 +35,19 @@ export default function Header() {
 				}`}
 			>
 				<ul className="navigation__list">
-					<li className="navigation__list-item navigation__list-item--mercury">
-						<a href="/">mercury</a>
-					</li>
-					<li className="navigation__list-item navigation__list-item--venus">
-						<a href="/">venus</a>
-					</li>
-					<li className="navigation__list-item navigation__list-item--earth">
-						<a href="/">earth</a>
-					</li>
-					<li className="navigation__list-item navigation__list-item--mars">
-						<a href="/">mars</a>
-					</li>
-					<li className="navigation__list-item navigation__list-item--jupiter">
-						<a href="/">jupiter</a>
-					</li>
-					<li className="navigation__list-item navigation__list-item--saturn">
-						<a href="/">saturn</a>
-					</li>
-					<li className="navigation__list-item navigation__list-item--uranus">
-						<a href="/">uranus</a>
-					</li>
-					<li className="navigation__list-item navigation__list-item--neptune">
-						<a href="/">neptune</a>
-					</li>
+					{localJson.map((data) => (
+						<li
+							className={`navigation__list-item navigation__list-item--${data.name.toLowerCase()}`}
+							key={data.name}
+						>
+							<Link
+								to={`/${data.name.toLowerCase()}`}
+								onClick={toggleClass}
+							>
+								{data.name}
+							</Link>
+						</li>
+					))}
 				</ul>
 			</div>
 		</header>
