@@ -1,0 +1,115 @@
+@import "../../sass/base/colors";
+
+.header {
+	.brand {
+		padding: 16px 24px 17px 16px;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+		display: flex;
+		justify-content: space-between;
+		.menu-toggle {
+			display: block;
+			cursor: pointer;
+			.bar {
+				display: block;
+				width: 25px;
+				height: 3px;
+				background-color: map-get($map: $colors, $key: white);
+				margin: 5px auto;
+			}
+			&__activate {
+				.bar {
+					background-color: rgba(255, 255, 255, 0.25);
+				}
+			}
+		}
+	}
+
+	.navigation {
+		background-color: rgba(7, 7, 36, 1);
+		height: 100vh;
+		&__list {
+			padding: 24px 24px 67px 24px;
+			&-item {
+				text-transform: uppercase;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				flex-wrap: wrap;
+				a {
+					display: block;
+					padding: 20px 0;
+				}
+
+				&:not(:last-child) {
+					border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+				}
+
+				&::before {
+					content: "";
+					margin-right: 25px;
+					width: 20px;
+					height: 20px;
+					border-radius: 50%;
+				}
+
+				&::after {
+					content: "";
+					background-image: url("../../images/icon-chevron.svg");
+					background-position-x: 100%;
+					background-repeat: no-repeat;
+					height: 8px;
+					width: 4px;
+					flex: 1;
+				}
+
+				&--mercury {
+					&::before {
+						background-color: map-get($map: $colors, $key: mercury);
+					}
+				}
+
+				&--venus {
+					&::before {
+						background-color: map-get($map: $colors, $key: venus);
+					}
+				}
+
+				&--earth {
+					&::before {
+						background-color: map-get($map: $colors, $key: earth);
+					}
+				}
+
+				&--mars {
+					&::before {
+						background-color: map-get($map: $colors, $key: mars);
+					}
+				}
+
+				&--jupiter {
+					&::before {
+						background-color: map-get($map: $colors, $key: jupiter);
+					}
+				}
+
+				&--saturn {
+					&::before {
+						background-color: map-get($map: $colors, $key: saturn);
+					}
+				}
+
+				&--uranus {
+					&::before {
+						background-color: map-get($map: $colors, $key: uranus);
+					}
+				}
+
+				&--neptune {
+					&::before {
+						background-color: map-get($map: $colors, $key: neptune);
+					}
+				}
+			}
+		}
+	}
+}
