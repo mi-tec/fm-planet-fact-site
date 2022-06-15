@@ -3,6 +3,10 @@ import { useParams } from "react-router-dom";
 
 import localJson from "../data/data.json";
 
+import Tabs from "../Tabs/Tabs";
+
+import "./Planet.scss";
+
 function Planet() {
 	const [Data, setData] = useState([]);
 	const { id } = useParams();
@@ -16,7 +20,9 @@ function Planet() {
 	}, [id]);
 
 	return (
-		<img src={require(`../../images/planet-${id}.svg`)} alt={Data.name} />
+		<section className="planet">
+			<Tabs data={Data.name} />
+		</section>
 	);
 }
 
