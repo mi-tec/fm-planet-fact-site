@@ -2,6 +2,12 @@
 
 @import-normalize;
 
+:root {
+  --font-spartan: 'League Spartan', sans-serif;
+  --font-antonio: 'Antonio', sans-serif;
+  --font-bold: 700;
+}
+
 html,
 body {
   height: 100%;
@@ -14,6 +20,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  color: #ffffff;
 }
 
 ul,
