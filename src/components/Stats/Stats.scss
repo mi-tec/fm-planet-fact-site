@@ -1,0 +1,33 @@
+.planet {
+	&__stats {
+		max-width: 327px;
+		margin: 0 auto 47px auto;
+		&--list {
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: column;
+			row-gap: 8px;
+			&-item {
+				padding: 9px 24px 13px 24px;
+				border: 1px solid rgba(255, 255, 255, 0.2);
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				.title {
+					font-size: 8px;
+					font-weight: 700;
+					line-height: 16px;
+					letter-spacing: 0.73;
+					color: var(--color-light-gray);
+				}
+				.data {
+					font-family: var(--font-antonio);
+					font-size: 20px;
+					line-height: 26px;
+					letter-spacing: -0.75px;
+					text-align: right;
+				}
+			}
+		}
+	}
+}
