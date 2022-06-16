@@ -2,9 +2,10 @@
 	position: relative;
 	.brand {
 		padding: 16px 24px 17px 16px;
-		border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 		display: flex;
 		justify-content: space-between;
+		max-width: 327px;
+		margin: 0 auto;
 		.menu-toggle {
 			display: block;
 			cursor: pointer;
@@ -32,6 +33,8 @@
 		display: none;
 		&__list {
 			padding: 24px 24px 67px 24px;
+			max-width: 327px;
+			margin: 0 auto;
 			&-item {
 				text-transform: uppercase;
 				a {

@@ -47,6 +47,18 @@ body {
   font-family: 'League Spartan', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-style: 14px;
+  color: rgba(255, 255, 255, 1);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
 }
 
 h1 {
@@ -102,6 +114,10 @@ a {
   margin-right: 28px;
 }
 
+.divider {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
 .button:hover {
   background-color: rgba(216, 216, 216, 0.2);
 }
@@ -136,4 +152,52 @@ a {
 
 .planet__tabs-tab--neptune {
   border-bottom: 3px solid var(--color-neptune);
+}
+
+.planet__image-mercury,
+.planet__image-mercury--structure {
+  width: 111px;
+  height: 111px;
+}
+
+.planet__image-venus,
+.planet__image-venus--structure {
+  width: 154px;
+  height: 154px;
+}
+
+.planet__image-earth,
+.planet__image-earth--structure {
+  width: 173px;
+  height: 173px;
+}
+
+.planet__image-mars,
+.planet__image-mars--structure {
+  width: 129px;
+  height: 129px;
+}
+
+.planet__image-jupiter,
+.planet__image-jupiter--structure {
+  width: 224px;
+  height: 224px;
+}
+
+.planet__image-saturn,
+.planet__image-saturn--structure {
+  width: 256px;
+  height: 256px;
+}
+
+.planet__image-uranus,
+.planet__image-uranus--structure {
+  width: 176px;
+  height: 176px;
+}
+
+.planet__image-neptune,
+.planet__image-neptune--structure {
+  width: 173px;
+  height: 173px;
 }
