@@ -21,7 +21,7 @@ function Planet() {
 
 	return (
 		<section className="planet">
-			<Tabs data={Data.name} />
+			<Tabs data={Data.name} id={id} />
 		</section>
 	);
 }
