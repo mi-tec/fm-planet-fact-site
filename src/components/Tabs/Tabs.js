@@ -1,6 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+
+import localJson from "../data/data.json";
+
+import icon_source from "../../images/icon-source.svg";
 
 function Tabs(props) {
+	const [Data, setData] = useState([]);
+	const [overview, setOverView] = useState([]);
+	const [structure, setStructure] = useState([]);
+	const [surface, setSerface] = useState([]);
+
 	const data_tabs = document.querySelectorAll(".planet__tabs-tab");
 	const data_values = document.querySelectorAll(
 		".planet__tabs-content--content"
@@ -21,6 +30,18 @@ function Tabs(props) {
 		}
 		event.target.classList.add(`planet__tabs-tab--${props.id}`);
 	};
+
+	useEffect(() => {
+		const found = localJson.find(
+			(obj) =>
+				obj.name ===
+				props.id[0].toUpperCase() + props.id.slice(1).toLowerCase()
+		);
+		setData(found);
+		setOverView(found.overview);
+		setStructure(found.structure);
+		setSerface(found.geology);
+	}, [props.id, Data, overview, structure]);
 
 	return (
 		<>
@@ -47,24 +68,85 @@ function Tabs(props) {
 					Surface
 				</span>
 			</div>
+			<div className="divider"></div>
 			<div className="planet__tabs-content">
 				<div
 					className="planet__tabs-content--content active"
 					data-value="overview"
 				>
-					overview
+					<div className="planet__image">
+						<img
+							className={`planet__image-${props.id}`}
+							src={require(`../../images/planet-${props.id}.svg`)}
+							alt={`${props.id}`}
+						/>
+					</div>
+					<h1 className="planet__heading">{`${Data.name}`}</h1>
+					<p className="planet__description">{`${overview.content}`}</p>
+					<div className="planet__link">
+						<span className="planet__link--source">Source : </span>
+						<a
+							className="planet__link--link"
+							href={`${overview.source}`}
+						>
+							Wikipedia
+						</a>
+						<span className="planet__link--icon">
+							<img src={icon_source} alt="Wikipedia" />
+						</span>
+					</div>
 				</div>
 				<div
 					className="planet__tabs-content--content"
 					data-value="structure"
 				>
-					structure
+					<div className="planet__image">
+						<img
+							className={`planet__image-${props.id}--structure`}
+							src={require(`../../images/planet-${props.id}-internal.svg`)}
+							alt={`${props.id}`}
+						/>
+					</div>
+					<h1 className="planet__heading">{`${Data.name}`}</h1>
+					<p className="planet__description">{`${structure.content}`}</p>
+					<div className="planet__link">
+						<span className="planet__link--source">Source : </span>
+						<a
+							className="planet__link--link"
+							href={`${structure.source}`}
+						>
+							Wikipedia
+						</a>
+						<span className="planet__link--icon">
+							<img src={icon_source} alt="Wikipedia" />
+						</span>
+					</div>
 				</div>
 				<div
 					className="planet__tabs-content--content"
 					data-value="surface"
 				>
-					surface
+					<div className="planet__image">
+						<img
+							className={`planet__image-${props.id}`}
+							src={require(`../../images/planet-${props.id}.svg`)}
+							alt={`${props.id}`}
+						/>
+					</div>
+					<h1 className="planet__heading">{`${Data.name}`}</h1>
+					<p className="planet__description">{`${surface.content}`}</p>
+					<div className="planet__link">
+						<span className="planet__link--source">Source : </span>
+						<a
+							className="planet__link--link"
+							href={`${surface.source}`}
+						>
+							Wikipedia
+						</a>
+						<span className="planet__link--icon">
+							<img src={icon_source} alt="Wikipedia" />
+						</span>
+					</div>
 				</div>
 			</div>
 		</>
