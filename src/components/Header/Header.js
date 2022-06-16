@@ -10,8 +10,35 @@ import "./Header.scss";
 export default function Header() {
 	const [isShowMobileMenu, setShowMobileMenu] = useState(false);
 
+	const url_string = window.location.href.toLowerCase();
+	const url = new URL(url_string);
+	const patchname = url.pathname;
+	const id = patchname.replace("/", "");
+
 	const toggleClass = () => {
 		setShowMobileMenu(!isShowMobileMenu);
+		const data_tabs = document.querySelectorAll(".planet__tabs-tab");
+		const data_values = document.querySelectorAll(
+			".planet__tabs-content--content"
+		);
+
+		for (let i = 0; i < data_values.length; i++) {
+			const data_value_element = data_values[i];
+			if (i === 0) {
+				data_value_element.classList.add(`active`);
+			} else {
+				data_value_element.classList.remove(`active`);
+			}
+		}
+
+		for (let y = 0; y < data_tabs.length; y++) {
+			const data_tab_element = data_tabs[y];
+			if (y === 0) {
+				data_tab_element.classList.add(`planet__tabs-tab--${id}`);
+			} else {
+				data_tab_element.classList.remove(`planet__tabs-tab--${id}`);
+			}
+		}
 	};
 
 	return (

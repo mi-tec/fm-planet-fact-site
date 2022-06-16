@@ -6,6 +6,18 @@
   --font-spartan: 'League Spartan', sans-serif;
   --font-antonio: 'Antonio', sans-serif;
   --font-bold: 700;
+  --color-white: #ffffff;
+  --color-black: #070724;
+  --color-dark-gray: #38384f;
+  --color-light-gray: #838391;
+  --color-mercury: #419ebb;
+  --color-venus: #eda249;
+  --color-earth: #6d2ed5;
+  --color-mars: #d14c32;
+  --color-jupiter: #d83a34;
+  --color-saturn: #cd5120;
+  --color-uranus: #1ec2a4;
+  --color-neptune: #2d68f0;
 }
 
 html,
@@ -92,4 +104,36 @@ a {
 
 .button:hover {
   background-color: rgba(216, 216, 216, 0.2);
+}
+
+.planet__tabs-tab--mercury {
+  border-bottom: 3px solid var(--color-mercury);
+}
+
+.planet__tabs-tab--venus {
+  border-bottom: 3px solid var(--color-venus);
+}
+
+.planet__tabs-tab--earth {
+  border-bottom: 3px solid var(--color-earth);
+}
+
+.planet__tabs-tab--mars {
+  border-bottom: 3px solid var(--color-mars);
+}
+
+.planet__tabs-tab--jupiter {
+  border-bottom: 3px solid var(--color-jupiter);
+}
+
+.planet__tabs-tab--saturn {
+  border-bottom: 3px solid var(--color-saturn);
+}
+
+.planet__tabs-tab--uranus {
+  border-bottom: 3px solid var(--color-uranus);
+}
+
+.planet__tabs-tab--neptune {
+  border-bottom: 3px solid var(--color-neptune);
 }
