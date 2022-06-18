@@ -1,18 +1,36 @@
-.planet {
-	&__stats {
+.stats {
+	&__component {
 		max-width: 327px;
 		margin: 0 auto 47px auto;
+		@media only screen and (max-width: 375px) {
+			padding: 0 24px 0 24px;
+		}
+
+		@media only screen and (min-width: 768px) {
+			max-width: 690px;
+		}
 		&--list {
 			display: flex;
 			flex-wrap: wrap;
 			flex-direction: column;
 			row-gap: 8px;
+			@media only screen and (min-width: 768px) {
+				flex-direction: row;
+				column-gap: 11px;
+			}
 			&-item {
 				padding: 9px 24px 13px 24px;
 				border: 1px solid rgba(255, 255, 255, 0.2);
 				display: flex;
 				justify-content: space-between;
 				align-items: center;
+				@media only screen and (min-width: 768px) {
+					flex-direction: column;
+					width: calc((690px / 4) - 25.5px);
+					padding: 16px 0 19px 15px;
+					align-items: flex-start;
+					text-transform: uppercase;
+				}
 				.title {
 					font-size: 8px;
 					font-weight: 700;

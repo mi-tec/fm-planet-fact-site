@@ -4,6 +4,8 @@ import localJson from "../data/data.json";
 
 import icon_source from "../../images/icon-source.svg";
 
+import "./Tabs.scss";
+
 function Tabs(props) {
 	const [Data, setData] = useState([]);
 	const [overview, setOverView] = useState([]);
@@ -14,10 +16,15 @@ function Tabs(props) {
 	const data_values = document.querySelectorAll(
 		".planet__tabs-content--content"
 	);
+	const data_images = document.querySelectorAll(".planet__image");
 
 	const changeTab = (event) => {
 		const data_tab = event.target.dataset.tab;
 		const data_value = document.querySelector(`[data-value="${data_tab}"]`);
+		const data_image = document.querySelector(
+			`[data-image="${data_tab}-img"]`
+		);
+
 		for (let i = 0; i < data_values.length; i++) {
 			const data_value_element = data_values[i];
 			data_value_element.classList.remove("active");
@@ -29,6 +36,13 @@ function Tabs(props) {
 			data_tab_element.classList.remove(`planet__tabs-tab--${props.id}`);
 		}
 		event.target.classList.add(`planet__tabs-tab--${props.id}`);
+
+		for (let x = 0; x < data_images.length; x++) {
+			const data_image_element = data_images[x];
+			console.log(data_image_element);
+			data_image_element.classList.remove(`planet__image--active`);
+		}
+		data_image.classList.add(`planet__image--active`);
 	};
 
 	useEffect(() => {
@@ -51,36 +65,55 @@ function Tabs(props) {
 					data-tab="overview"
 					onClick={changeTab}
 				>
-					Overview
+					<span className="number">01</span>Overview
 				</span>
 				<span
 					className="planet__tabs-tab"
 					data-tab="structure"
 					onClick={changeTab}
 				>
-					Structure
+					<span className="number">02</span>Structure
 				</span>
 				<span
 					className="planet__tabs-tab"
 					data-tab="surface"
 					onClick={changeTab}
 				>
-					Surface
+					<span className="number">02</span>Surface
 				</span>
 			</div>
 			<div className="divider"></div>
+			<div className="planet__tabs-image">
+				<div
+					className="planet__image planet__image--active"
+					data-image="overview-img"
+				>
+					<img
+						className={`planet__image-${props.id}`}
+						src={require(`../../images/planet-${props.id}.svg`)}
+						alt={`${props.id}`}
+					/>
+				</div>
+				<div className="planet__image" data-image="structure-img">
+					<img
+						className={`planet__image-${props.id}--structure`}
+						src={require(`../../images/planet-${props.id}-internal.svg`)}
+						alt={`${props.id}`}
+					/>
+				</div>
+				<div className="planet__image" data-image="surface-img">
+					<img
+						className={`planet__image-${props.id}`}
+						src={require(`../../images/planet-${props.id}.svg`)}
+						alt={`${props.id}`}
+					/>
+				</div>
+			</div>
 			<div className="planet__tabs-content">
 				<div
 					className="planet__tabs-content--content active"
 					data-value="overview"
 				>
-					<div className="planet__image">
-						<img
-							className={`planet__image-${props.id}`}
-							src={require(`../../images/planet-${props.id}.svg`)}
-							alt={`${props.id}`}
-						/>
-					</div>
 					<h1 className="planet__heading">{`${Data.name}`}</h1>
 					<p className="planet__description">{`${overview.content}`}</p>
 					<div className="planet__link">
@@ -100,13 +133,6 @@ function Tabs(props) {
 					className="planet__tabs-content--content"
 					data-value="structure"
 				>
-					<div className="planet__image">
-						<img
-							className={`planet__image-${props.id}--structure`}
-							src={require(`../../images/planet-${props.id}-internal.svg`)}
-							alt={`${props.id}`}
-						/>
-					</div>
 					<h1 className="planet__heading">{`${Data.name}`}</h1>
 					<p className="planet__description">{`${structure.content}`}</p>
 					<div className="planet__link">
@@ -126,13 +152,6 @@ function Tabs(props) {
 					className="planet__tabs-content--content"
 					data-value="surface"
 				>
-					<div className="planet__image">
-						<img
-							className={`planet__image-${props.id}`}
-							src={require(`../../images/planet-${props.id}.svg`)}
-							alt={`${props.id}`}
-						/>
-					</div>
 					<h1 className="planet__heading">{`${Data.name}`}</h1>
 					<p className="planet__description">{`${surface.content}`}</p>
 					<div className="planet__link">
