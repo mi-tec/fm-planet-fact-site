@@ -118,6 +118,12 @@ a {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+@media only screen and (min-width: 768px) {
+  .divider {
+    display: none;
+  }
+}
+
 .button:hover {
   background-color: rgba(216, 216, 216, 0.2);
 }
@@ -160,10 +166,28 @@ a {
   height: 111px;
 }
 
+@media only screen and (min-width: 768px) {
+
+  .planet__image-mercury,
+  .planet__image-mercury--structure {
+    width: 184px;
+    height: 184px;
+  }
+}
+
 .planet__image-venus,
 .planet__image-venus--structure {
   width: 154px;
   height: 154px;
+}
+
+@media only screen and (min-width: 768px) {
+
+  .planet__image-venus,
+  .planet__image-venus--structure {
+    width: 253px;
+    height: 253px;
+  }
 }
 
 .planet__image-earth,
@@ -172,10 +196,28 @@ a {
   height: 173px;
 }
 
+@media only screen and (min-width: 768px) {
+
+  .planet__image-earth,
+  .planet__image-earth--structure {
+    width: 285px;
+    height: 285px;
+  }
+}
+
 .planet__image-mars,
 .planet__image-mars--structure {
   width: 129px;
   height: 129px;
+}
+
+@media only screen and (min-width: 768px) {
+
+  .planet__image-mars,
+  .planet__image-mars--structure {
+    width: 213px;
+    height: 213px;
+  }
 }
 
 .planet__image-jupiter,
@@ -184,10 +226,28 @@ a {
   height: 224px;
 }
 
+@media only screen and (min-width: 768px) {
+
+  .planet__image-jupiter,
+  .planet__image-jupiter--structure {
+    width: 369px;
+    height: 369px;
+  }
+}
+
 .planet__image-saturn,
 .planet__image-saturn--structure {
   width: 256px;
   height: 256px;
+}
+
+@media only screen and (min-width: 768px) {
+
+  .planet__image-saturn,
+  .planet__image-saturn--structure {
+    width: 422px;
+    height: 422px;
+  }
 }
 
 .planet__image-uranus,
@@ -196,8 +256,26 @@ a {
   height: 176px;
 }
 
+@media only screen and (min-width: 768px) {
+
+  .planet__image-uranus,
+  .planet__image-uranus--structure {
+    width: 290px;
+    height: 290px;
+  }
+}
+
 .planet__image-neptune,
 .planet__image-neptune--structure {
   width: 173px;
   height: 173px;
+}
+
+@media only screen and (min-width: 768px) {
+
+  .planet__image-neptune,
+  .planet__image-neptune--structure {
+    width: 285px;
+    height: 285px;
+  }
 }

@@ -10,10 +10,14 @@ function Planet() {
 	const { id } = useParams();
 
 	return (
-		<section className="planet">
-			<Tabs id={id} />
-			<Stats id={id} />
-		</section>
+		<>
+			<section className="planet">
+				<Tabs id={id} />
+			</section>
+			<section className="stats">
+				<Stats id={id} />
+			</section>
+		</>
 	);
 }
 
