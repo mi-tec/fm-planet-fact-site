@@ -18,6 +18,7 @@
   --color-saturn: #cd5120;
   --color-uranus: #1ec2a4;
   --color-neptune: #2d68f0;
+  --color-hover: #D8D8D8;
 }
 
 html,
@@ -132,32 +133,88 @@ a {
   border-bottom: 3px solid var(--color-mercury);
 }
 
+@media only screen and (min-width: 768px) {
+  .planet__tabs-tab--mercury {
+    background-color: var(--color-mercury);
+    border: 1px solid var(--color-mercury);
+  }
+}
+
 .planet__tabs-tab--venus {
   border-bottom: 3px solid var(--color-venus);
+}
+
+@media only screen and (min-width: 768px) {
+  .planet__tabs-tab--venus {
+    background-color: var(--color-venus);
+    border: 1px solid var(--color-venus);
+  }
 }
 
 .planet__tabs-tab--earth {
   border-bottom: 3px solid var(--color-earth);
 }
 
+@media only screen and (min-width: 768px) {
+  .planet__tabs-tab--earth {
+    background-color: var(--color-earth);
+    border: 1px solid var(--color-earth);
+  }
+}
+
 .planet__tabs-tab--mars {
   border-bottom: 3px solid var(--color-mars);
+}
+
+@media only screen and (min-width: 768px) {
+  .planet__tabs-tab--mars {
+    background-color: var(--color-mars);
+    border: 1px solid var(--color-mars);
+  }
 }
 
 .planet__tabs-tab--jupiter {
   border-bottom: 3px solid var(--color-jupiter);
 }
 
+@media only screen and (min-width: 768px) {
+  .planet__tabs-tab--jupiter {
+    background-color: var(--color-jupiter);
+    border: 1px solid var(--color-jupiter);
+  }
+}
+
 .planet__tabs-tab--saturn {
   border-bottom: 3px solid var(--color-saturn);
+}
+
+@media only screen and (min-width: 768px) {
+  .planet__tabs-tab--saturn {
+    background-color: var(--color-saturn);
+    border: 1px solid var(--color-saturn);
+  }
 }
 
 .planet__tabs-tab--uranus {
   border-bottom: 3px solid var(--color-uranus);
 }
 
+@media only screen and (min-width: 768px) {
+  .planet__tabs-tab--uranus {
+    background-color: var(--color-uranus);
+    border: 1px solid var(--color-uranus);
+  }
+}
+
 .planet__tabs-tab--neptune {
   border-bottom: 3px solid var(--color-neptune);
+}
+
+@media only screen and (min-width: 768px) {
+  .planet__tabs-tab--neptune {
+    background-color: var(--color-neptune);
+    border: 1px solid var(--color-neptune);
+  }
 }
 
 .planet__image-mercury,
@@ -172,6 +229,15 @@ a {
   .planet__image-mercury--structure {
     width: 184px;
     height: 184px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+
+  .planet__image-mercury,
+  .planet__image-mercury--structure {
+    width: 290px;
+    height: 290px;
   }
 }
 
@@ -190,6 +256,15 @@ a {
   }
 }
 
+@media only screen and (min-width: 1440px) {
+
+  .planet__image-venus,
+  .planet__image-venus--structure {
+    width: 400px;
+    height: 400px;
+  }
+}
+
 .planet__image-earth,
 .planet__image-earth--structure {
   width: 173px;
@@ -202,6 +277,15 @@ a {
   .planet__image-earth--structure {
     width: 285px;
     height: 285px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+
+  .planet__image-earth,
+  .planet__image-earth--structure {
+    width: 450px;
+    height: 450px;
   }
 }
 
@@ -220,6 +304,15 @@ a {
   }
 }
 
+@media only screen and (min-width: 1440px) {
+
+  .planet__image-mars,
+  .planet__image-mars--structure {
+    width: 336px;
+    height: 336px;
+  }
+}
+
 .planet__image-jupiter,
 .planet__image-jupiter--structure {
   width: 224px;
@@ -232,6 +325,15 @@ a {
   .planet__image-jupiter--structure {
     width: 369px;
     height: 369px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+
+  .planet__image-jupiter,
+  .planet__image-jupiter--structure {
+    width: 582px;
+    height: 582px;
   }
 }
 
@@ -250,6 +352,15 @@ a {
   }
 }
 
+@media only screen and (min-width: 1440px) {
+
+  .planet__image-saturn,
+  .planet__image-saturn--structure {
+    width: 666px;
+    height: 666px;
+  }
+}
+
 .planet__image-uranus,
 .planet__image-uranus--structure {
   width: 176px;
@@ -265,6 +376,15 @@ a {
   }
 }
 
+@media only screen and (min-width: 1440px) {
+
+  .planet__image-uranus,
+  .planet__image-uranus--structure {
+    width: 458px;
+    height: 458px;
+  }
+}
+
 .planet__image-neptune,
 .planet__image-neptune--structure {
   width: 173px;
@@ -277,5 +397,34 @@ a {
   .planet__image-neptune--structure {
     width: 285px;
     height: 285px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+
+  .planet__image-neptune,
+  .planet__image-neptune--structure {
+    width: 450px;
+    height: 450px;
+  }
+}
+
+@keyframes key1 {
+  0% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }
