@@ -17,21 +17,21 @@ function Stats(props) {
 	}, [props.id]);
 
 	return (
-		<div className="planet__stats">
-			<ul className="planet__stats--list">
-				<li className="planet__stats--list-item">
+		<div className="stats__component">
+			<ul className="stats__component--list">
+				<li className="stats__component--list-item">
 					<span className="title">Rotation Time</span>
 					<span className="data">{Data.rotation}</span>
 				</li>
-				<li className="planet__stats--list-item">
+				<li className="stats__component--list-item">
 					<span className="title">Revolution Time</span>
 					<span className="data">{Data.revolution}</span>
 				</li>
-				<li className="planet__stats--list-item">
+				<li className="stats__component--list-item">
 					<span className="title">Radius</span>
 					<span className="data">{Data.radius}</span>
 				</li>
-				<li className="planet__stats--list-item">
+				<li className="stats__component--list-item">
 					<span className="title">Average Temp.</span>
 					<span className="data">{Data.temperature}</span>
 				</li>
