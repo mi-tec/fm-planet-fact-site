@@ -1,5 +1,14 @@
 .header {
 	position: relative;
+	@media only screen and (min-width: 1440px) {
+		max-width: 1368px;
+		margin: 0 auto;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+		padding: 22px 32px 27px 40px;
+	}
 	.brand {
 		padding: 16px 24px 17px 16px;
 		display: flex;
@@ -10,6 +19,11 @@
 			max-width: none;
 			justify-content: center;
 			margin-bottom: 40px;
+		}
+
+		@media only screen and (min-width: 1440px) {
+			margin: 0;
+			padding: 0;
 		}
 
 		.menu-toggle {
@@ -52,6 +66,10 @@
 			overflow: auto;
 		}
 
+		@media only screen and (min-width: 1440px) {
+			border-bottom: none;
+		}
+
 		&__list {
 			padding: 24px 24px 67px 24px;
 			max-width: 327px;
@@ -63,6 +81,10 @@
 				justify-content: center;
 				margin-bottom: 27px;
 				padding: 0;
+			}
+
+			@media only screen and (min-width: 1440px) {
+				margin-bottom: 0;
 			}
 
 			&-item {
@@ -84,6 +106,13 @@
 						line-height: 25px;
 						letter-spacing: 1px;
 						padding: 0;
+					}
+
+					@media only screen and (min-width: 1440px) {
+						color: var(--color-light-gray);
+						&:hover {
+							color: var(--color-white);
+						}
 					}
 
 					&::before {

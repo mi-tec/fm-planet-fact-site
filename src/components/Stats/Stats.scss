@@ -9,6 +9,10 @@
 		@media only screen and (min-width: 768px) {
 			max-width: 690px;
 		}
+
+		@media only screen and (min-width: 1440px) {
+			max-width: 1110px;
+		}
 		&--list {
 			display: flex;
 			flex-wrap: wrap;
@@ -18,6 +22,11 @@
 				flex-direction: row;
 				column-gap: 11px;
 			}
+
+			@media only screen and (min-width: 1440px) {
+				column-gap: 30px;
+			}
+
 			&-item {
 				padding: 9px 24px 13px 24px;
 				border: 1px solid rgba(255, 255, 255, 0.2);
@@ -26,17 +35,29 @@
 				align-items: center;
 				@media only screen and (min-width: 768px) {
 					flex-direction: column;
-					width: calc((690px / 4) - 25.5px);
+					width: calc((100% / 4) - 25.5px);
 					padding: 16px 0 19px 15px;
-					align-items: flex-start;
 					text-transform: uppercase;
+					align-items: flex-start;
 				}
+
+				@media only screen and (min-width: 1440px) {
+					width: calc((100% / 4) - 47.5px);
+					padding: 20px 0 27px 23px;
+				}
+
 				.title {
 					font-size: 8px;
 					font-weight: 700;
 					line-height: 16px;
 					letter-spacing: 0.73;
 					color: var(--color-light-gray);
+					@media only screen and (min-width: 1440px) {
+						font-size: 11px;
+						line-height: 25px;
+						letter-spacing: 1px;
+						margin-bottom: 4px;
+					}
 				}
 				.data {
 					font-family: var(--font-antonio);
@@ -44,6 +65,11 @@
 					line-height: 26px;
 					letter-spacing: -0.75px;
 					text-align: right;
+					@media only screen and (min-width: 1440px) {
+						font-size: 40px;
+						line-height: 52px;
+						letter-spacing: -1.5px;
+					}
 				}
 			}
 		}

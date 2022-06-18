@@ -39,7 +39,6 @@ function Tabs(props) {
 
 		for (let x = 0; x < data_images.length; x++) {
 			const data_image_element = data_images[x];
-			console.log(data_image_element);
 			data_image_element.classList.remove(`planet__image--active`);
 		}
 		data_image.classList.add(`planet__image--active`);
@@ -105,6 +104,11 @@ function Tabs(props) {
 					<img
 						className={`planet__image-${props.id}`}
 						src={require(`../../images/planet-${props.id}.svg`)}
+						alt={`${props.id}`}
+					/>
+					<img
+						className={`planet__image-${props.id} planet__image-geology`}
+						src={require(`../../images/geology-${props.id}.png`)}
 						alt={`${props.id}`}
 					/>
 				</div>
