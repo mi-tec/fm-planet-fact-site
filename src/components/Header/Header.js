@@ -15,6 +15,8 @@ export default function Header() {
 	const patchname = url.pathname;
 	const id = patchname.replace("/", "");
 
+	console.log(id);
+
 	const toggleClass = () => {
 		setShowMobileMenu(!isShowMobileMenu);
 		const data_tabs = document.querySelectorAll(".planet__tabs-tab");
