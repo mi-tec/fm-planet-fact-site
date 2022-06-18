@@ -3,7 +3,7 @@
 		max-width: 690px;
 		margin: 0 auto 27px auto;
 		display: grid;
-		grid-template-columns: repeat(2, 345px);
+		grid-template-columns: repeat(2, 50%);
 		grid-template-areas:
 			"a a"
 			"b c";
@@ -26,6 +26,25 @@
 			grid-area: b;
 			max-width: 339px;
 			margin: 0;
+		}
+	}
+
+	@media only screen and (min-width: 1440px) {
+		max-width: 1110px;
+		margin-top: 126px;
+		grid-template-columns: 760px 350px;
+		grid-template-areas:
+			"a b"
+			"a c";
+		&__tabs,
+		&__tabs-content {
+			max-width: 350px;
+		}
+		&__tabs {
+			justify-self: stretch;
+		}
+		&__tabs-image {
+			max-width: 760px !important;
 		}
 	}
 }

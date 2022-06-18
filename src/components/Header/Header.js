@@ -45,7 +45,9 @@ export default function Header() {
 		<>
 			<header className="header">
 				<div className="brand">
-					<img src={logo} className="brand__logo" alt="logo" />
+					<a href="/">
+						<img src={logo} className="brand__logo" alt="logo" />
+					</a>
 					<div
 						className={`menu-toggle ${
 							isShowMobileMenu ? "menu-toggle__activate" : ""
